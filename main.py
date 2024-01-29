@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord.ext import tasks
 from libs import settings
 from libs.progressbar import printProgressBar
+from libs.School_crawler import get_news
 from libs.logger import console_logger, record_logger
 import keep_alive
 import datetime
@@ -15,12 +16,34 @@ class Shubi(commands.Bot):
   def __init__(self):
     super().__init__(command_prefix = settings.comprefix, intents = discord.Intents.all(), help_command = None)
     self.start_time = time.time()
+    self.channel = 1014769516896587886
 
   @tasks.loop(seconds = 60)
   async def status_task(self):
     await asyncio.sleep(60)
     custom = random.choice(settings.songs)
     await self.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name=custom))
+
+  @tasks.loop(hours=1)
+  async def get_news(self):
+    return
+    await self.wait_until_ready()
+
+    news = await get_news()
+    if not len(news.keys()): return
+
+    Embed = discord.Embed(title = "新竹高中最新訊息", color = discord.Color.red())
+    for k, t in news.items():
+      time = t["time"]
+      attr = t["attr_name"]
+      title = t["title"]
+      unit = t["unit_name"]
+      Embed.add_field(name = title, value = f"{time}  {unit}{attr}\n[連結](https://www.hchs.hc.edu.tw/ischool/public/news_view/show.php?nid={k})", inline = False)
+
+    Embed.set_footer(text = "學校公告", icon_url=settings.avatar)
+    channel = self.get_channel(self.channel)
+    await channel.send(embed = Embed)
+    await asyncio.sleep(3600)
 
   async def setup_hook(self):
     cogs = []
@@ -74,4 +97,4 @@ try:
 except Exception as e:
   console_logger.critical(f"{e}")
   record_logger.critical(f"{e}")
-  os.system('kill 1')
+  #os.system('kill 1')

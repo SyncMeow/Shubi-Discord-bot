@@ -4,7 +4,6 @@ from libs import settings
 from textwrap import wrap
 import cexprtk
 
-
 class misc(commands.Cog):
     def __init__(self, bot:discord.Client):
         self.bot = bot

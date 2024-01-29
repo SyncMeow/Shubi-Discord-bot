@@ -1,0 +1,26 @@
+{
+    "Common":{
+        "info":"機器人的常用功能",
+        "/poll":"創建一個投票活動"
+    },
+    "Annoymous":{
+        "info":"匿名頻道功能, 在匿名頻道輸入的任何文字或檔案皆會變成匿名",
+        "/anony add":"將當前文字頻道設置為匿名頻道",
+        "/annoy remove":"將當前匿名頻道解除為一般文字頻道",
+        "/annoy settings view":"檢視當前匿名頻道的設定",
+        "/annoy settings set":"設定當前匿名頻道的規則"
+    },
+    "Verify":{
+        "info":"伺服器驗證功能, 能夠新增一個問答測驗, 並設定通過後獲得的身分組",
+        "/verify start":"開始驗證流程",
+        "/verify add":"將當前頻道設定為驗證頻道",
+        "/verify remove":"將當前伺服器的驗證頻道取消",
+        "/verify settings view":"檢視驗證頻道的設定",
+        "/verify settings setq":"設定加入此伺服器的成員必須回答的題目",
+        "/verify settings setr":"設定成員回答完成問題後獲得的身分組"
+    },
+    "Math":{
+        "info":"數學運算功能, 主要是給懶得開計算機的人設計",
+        "s;m":"後面接上數學算式, 例如: (10+7)^2 - 9, 不得包含未知數"
+    }
+}

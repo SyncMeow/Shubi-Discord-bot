@@ -15,7 +15,7 @@ class economy(commands.Cog):
     self.db = await aiosqlite.connect("bank.db")
     await asyncio.sleep(3)
     async with self.db.cursor() as cursor:
-      await cursor.execute("CREATE TABLE IF NOT EXISTS bank(wallet INTEGER, bank INTEGER, maxbank INTEGER, user INTERGER)")
+      await cursor.execute("CREATE TABLE IF NOT EXISTS bank(wallet INTEGER, bank INTEGER, maxbank INTEGER, user INTEGER)")
       await cursor.execute("CREATE TABLE IF NOT EXISTS inv(user INTERGER)")
       await cursor.execute("CREATE TABLE IF NOT EXISTS shop(name TEXT, id TEXT, desc TEXT, cost INTEGER)")
     await self.db.commit()
