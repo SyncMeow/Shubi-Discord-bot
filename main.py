@@ -97,4 +97,3 @@ try:
 except Exception as e:
   console_logger.critical(f"{e}")
   record_logger.critical(f"{e}")
-  #os.system('kill 1')
