@@ -4,7 +4,7 @@ from fake_useragent import UserAgent
 import json
 
 cookies = {
-    'PHPSESSID': '6omgipkd69j145k0fn5bjkpp33',
+    'PHPSESSID': '',
 }
 
 ua = UserAgent()
@@ -13,7 +13,6 @@ headers = {
     'Accept-Language': 'zh-TW,zh;q=0.9,en-US;q=0.8,en;q=0.7',
     'Connection': 'keep-alive',
     'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
-    # 'Cookie': 'PHPSESSID=6omgipkd69j145k0fn5bjkpp33',
     'Origin': 'https://www.hchs.hc.edu.tw',
     'Referer': 'https://www.hchs.hc.edu.tw/ischool/widget/site_news/main2.php?uid=WID_0_2_0516b5aba93b58b0547367faafb2f1dbe2ebba4c&maximize=5',
     'Sec-Fetch-Dest': 'empty',
@@ -34,7 +33,7 @@ def getNewsPage(page:int) -> dict:
         'pageNum': f"{(page)}",
         'maxRows': '20',
         'keyword': '',
-        'uid': 'WID_0_2_0516b5aba93b58b0547367faafb2f1dbe2ebba4c',
+        'uid': '',
         'tf': '1',
         'auth_type': 'user',
     }
