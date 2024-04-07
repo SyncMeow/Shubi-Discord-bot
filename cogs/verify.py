@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from discord import app_commands
-from libs.Access_class import QuestionsSetModal, VerifyModal, QuestionContext
+from libs.access_class import QuestionsSetModal, VerifyModal, QuestionContext
 import json
 
 class verify(commands.Cog):

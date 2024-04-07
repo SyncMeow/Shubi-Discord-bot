@@ -1,0 +1,12 @@
+{
+    "token": "HERE USED TO HAVE A TOKEN", 
+    "comprefix":"s;",
+    "songs": ["Tempestissimo", "Pentiment", "World Vanquisher", "Grievous Lady", "Testify", "Monochrome Princess", "Purgatorium", "Fracture ray", "Astaroth","初めての恋が終わる時","忘れじの言の葉","ガジュマル Heaven in the Rain","僕は...","魑魅魍魎","星河一天","Revolt from the abyss","オルターエゴ","とても素敵な六月でした","Lord of Ashes","足りない","Void","Synthesized Angel","だきしめるまで"], 
+    "lavalink": {
+        "host": "HERE USED TO HAVE A LINK", 
+        "port": 1234, 
+        "password": "HERE USED TO HAVE A PASSWORD"
+    }, 
+    "avatar": "HERE USED TO HAVE A LINK FOR AVATAR",
+    "school_news_channel": 1111111111111111111
+}

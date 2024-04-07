@@ -1,7 +1,7 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
-from libs.Poll_class import PollCreateModal
+from libs.poll_class import PollCreateModal
 
 poll_activity = {}
 
